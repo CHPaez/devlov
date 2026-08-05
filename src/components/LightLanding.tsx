@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { useEffect } from 'react';
 import { Reveal } from './Reveal';
+import { Footer } from './Footer';
 import { WrenchIcon, OrbitIcon } from './icons';
 import { FONT_SANS, FONT_SERIF, LIGHT_COLORS as C } from '../theme';
 
@@ -126,8 +127,8 @@ export function LightLanding({ onEnterDark }: LightLandingProps) {
             lineHeight: 1.7,
           }}
         >
-          Software real, con oficio — y experiencias digitales que se sienten hechas a mano,
-          no armadas con una plantilla.
+          Desarrollamos software a medida y creamos experiencias digitales que se sienten
+          hechas a mano, no armadas con una plantilla.
         </p>
       </section>
 
@@ -206,7 +207,7 @@ export function LightLanding({ onEnterDark }: LightLandingProps) {
       </section>
 
       {/* Contacto */}
-      <section id="contacto" style={{ ...sectionStyle, textAlign: 'center', paddingBottom: 140 }}>
+      <section id="contacto" style={{ ...sectionStyle, textAlign: 'center' }}>
         <Reveal>
           <div style={eyebrowStyle}>Contacto</div>
           <h2 style={h2Style}>Hablemos de tu proyecto</h2>
@@ -218,6 +219,8 @@ export function LightLanding({ onEnterDark }: LightLandingProps) {
           </a>
         </Reveal>
       </section>
+
+      <Footer dark={false} />
 
       <button
         onClick={onEnterDark}

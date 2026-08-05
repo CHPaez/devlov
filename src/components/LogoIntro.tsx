@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { COLORS, LIGHT_COLORS } from '../theme';
 
 interface LogoIntroProps {
@@ -5,6 +6,10 @@ interface LogoIntroProps {
 }
 
 export function LogoIntro({ dark }: LogoIntroProps) {
+  // Cache-busted per mount so the browser restarts the APNG from frame 0 instead of
+  // reusing the already-finished playback of a previously loaded <img> with the same src.
+  const [playId] = useState(() => Date.now());
+
   return (
     <div
       style={{
@@ -19,7 +24,7 @@ export function LogoIntro({ dark }: LogoIntroProps) {
       }}
     >
       <img
-        src="/uploads/devlo-logo.png"
+        src={`/uploads/devlo-logo.png?v=${playId}`}
         alt="DevLov"
         style={{
           width: 260,

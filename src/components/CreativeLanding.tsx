@@ -4,6 +4,7 @@ import { Reveal } from './Reveal';
 import { Nav } from './Nav';
 import { StarField } from './StarField';
 import { ServiceCard } from './ServiceCard';
+import { Footer } from './Footer';
 import { WrenchIcon, OrbitIcon } from './icons';
 import { COLORS, FONT_SANS, FONT_SERIF } from '../theme';
 
@@ -112,8 +113,8 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
             lineHeight: 1.7,
           }}
         >
-          Software real, con oficio — y experiencias digitales que se sienten hechas a mano,
-          no armadas con una plantilla.
+          Desarrollamos software a medida y creamos experiencias digitales que se sienten
+          hechas a mano, no armadas con una plantilla.
         </p>
       </section>
 
@@ -180,7 +181,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
       </section>
 
       {/* Contacto */}
-      <section id="contacto" style={{ ...sectionStyle, textAlign: 'center', paddingBottom: 140 }}>
+      <section id="contacto" style={{ ...sectionStyle, textAlign: 'center' }}>
         <Reveal>
           <div style={eyebrowStyle}>Contacto</div>
           <h2 style={h2Style}>Hablemos de tu proyecto</h2>
@@ -199,6 +200,8 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
           </a>
         </Reveal>
       </section>
+
+      <Footer dark />
     </div>
   );
 }
