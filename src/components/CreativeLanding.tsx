@@ -85,7 +85,6 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
           justifyContent: 'center',
           textAlign: 'center',
           padding: '24px',
-          overflow: 'hidden',
         }}
       >
         <div style={{ ...blobStyle(420, COLORS.accentGradient), top: '8%', left: '-8%' }} />
@@ -119,10 +118,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
       </section>
 
       {/* Servicios */}
-      <section
-        id="servicios"
-        style={{ ...sectionStyle, minHeight: 'calc(100vh - 76px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
-      >
+      <section id="servicios" style={{ ...sectionStyle, paddingTop: 140, paddingBottom: 100 }}>
         <Reveal>
           <div style={eyebrowStyle}>Servicios</div>
           <h2 style={h2Style}>Dos formas de trabajar juntos</h2>

@@ -132,10 +132,7 @@ export function LightLanding({ onEnterDark }: LightLandingProps) {
       </section>
 
       {/* Servicios */}
-      <section
-        id="servicios"
-        style={{ ...sectionStyle, minHeight: 'calc(100vh - 76px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
-      >
+      <section id="servicios" style={{ ...sectionStyle, paddingTop: 140, paddingBottom: 100 }}>
         <Reveal>
           <div style={eyebrowStyle}>Servicios</div>
           <h2 style={h2Style}>Dos formas de trabajar juntos</h2>
