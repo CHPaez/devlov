@@ -1,16 +1,38 @@
 import { useEffect, useState } from 'react';
 import { LightLanding } from './components/LightLanding';
 import { CreativeLanding } from './components/CreativeLanding';
+import { LogoIntro } from './components/LogoIntro';
+
+const INTRO_MS = 1900;
+const TRANSITION_MS = 1300;
 
 function App() {
   const [dark, setDark] = useState(false);
+  const [intro, setIntro] = useState(true);
+  const [transitioning, setTransitioning] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const t = setTimeout(() => setIntro(false), INTRO_MS);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     if (!window.location.hash) return;
     document.querySelector(window.location.hash)?.scrollIntoView();
   }, [dark]);
 
-  return dark ? <CreativeLanding onExitDark={() => setDark(false)} /> : <LightLanding onEnterDark={() => setDark(true)} />;
+  function switchMode(next: boolean) {
+    setTransitioning(next);
+    setTimeout(() => {
+      setDark(next);
+      setTransitioning(null);
+    }, TRANSITION_MS);
+  }
+
+  if (intro) return <LogoIntro dark={dark} />;
+  if (transitioning !== null) return <LogoIntro dark={transitioning} />;
+
+  return dark ? <CreativeLanding onExitDark={() => switchMode(false)} /> : <LightLanding onEnterDark={() => switchMode(true)} />;
 }
 
 export default App;
