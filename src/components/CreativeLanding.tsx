@@ -185,7 +185,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
           <div style={eyebrowStyle}>Contacto</div>
           <h2 style={h2Style}>Hablemos de tu proyecto</h2>
           <a
-            href="mailto:d3vl0v@gmail.com"
+            href="mailto:devlov@universos.dev"
             style={{
               fontFamily: FONT_SERIF,
               fontStyle: 'italic',
@@ -195,7 +195,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
               textDecoration: 'none',
             }}
           >
-            d3vl0v@gmail.com
+            devlov@universos.dev
           </a>
         </Reveal>
       </section>
