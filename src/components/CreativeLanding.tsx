@@ -78,7 +78,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
       <section
         style={{
           position: 'relative',
-          minHeight: '92vh',
+          minHeight: '68vh',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

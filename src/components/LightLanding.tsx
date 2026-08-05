@@ -95,7 +95,7 @@ export function LightLanding({ onEnterDark }: LightLandingProps) {
       {/* Hero */}
       <section
         style={{
-          minHeight: '86vh',
+          minHeight: '62vh',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
