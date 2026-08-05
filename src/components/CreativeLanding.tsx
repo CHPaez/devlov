@@ -5,6 +5,7 @@ import { Nav } from './Nav';
 import { StarField } from './StarField';
 import { ServiceCard } from './ServiceCard';
 import { Footer } from './Footer';
+import { MiniFooterBar } from './MiniFooterBar';
 import { WrenchIcon, OrbitIcon } from './icons';
 import { COLORS, FONT_SANS, FONT_SERIF } from '../theme';
 
@@ -60,7 +61,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
         style={{
           position: 'fixed',
           left: 20,
-          bottom: 20,
+          bottom: 52,
           zIndex: 50,
           background: 'none',
           border: 'none',
@@ -202,6 +203,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
       </section>
 
       <Footer dark />
+      <MiniFooterBar dark />
     </div>
   );
 }

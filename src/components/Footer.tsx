@@ -10,6 +10,7 @@ export function Footer({ dark }: FooterProps) {
 
   return (
     <footer
+      id="site-footer"
       style={{
         borderTop: `1px solid ${border}`,
         padding: '36px 24px',

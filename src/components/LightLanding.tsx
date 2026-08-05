@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { useEffect } from 'react';
 import { Reveal } from './Reveal';
 import { Footer } from './Footer';
+import { MiniFooterBar } from './MiniFooterBar';
 import { WrenchIcon, OrbitIcon } from './icons';
 import { FONT_SANS, FONT_SERIF, LIGHT_COLORS as C } from '../theme';
 
@@ -221,13 +222,14 @@ export function LightLanding({ onEnterDark }: LightLandingProps) {
       </section>
 
       <Footer dark={false} />
+      <MiniFooterBar dark={false} />
 
       <button
         onClick={onEnterDark}
         style={{
           position: 'fixed',
           right: 22,
-          bottom: 22,
+          bottom: 60,
           zIndex: 50,
           display: 'flex',
           alignItems: 'center',
