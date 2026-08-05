@@ -3,8 +3,9 @@ import { LightLanding } from './components/LightLanding';
 import { CreativeLanding } from './components/CreativeLanding';
 import { LogoIntro } from './components/LogoIntro';
 
-const INTRO_MS = 1900;
-const TRANSITION_MS = 1300;
+// The logo animation itself runs 3500ms (35 frames @ 100ms) — hold a beat past that so it fully plays out.
+const INTRO_MS = 3700;
+const TRANSITION_MS = 3700;
 
 function App() {
   const [dark, setDark] = useState(false);
