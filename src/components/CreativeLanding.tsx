@@ -121,7 +121,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
       {/* Servicios */}
       <section
         id="servicios"
-        style={{ ...sectionStyle, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+        style={{ ...sectionStyle, minHeight: 'calc(100vh - 76px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
       >
         <Reveal>
           <div style={eyebrowStyle}>Servicios</div>
