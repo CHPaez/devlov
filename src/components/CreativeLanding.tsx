@@ -157,7 +157,7 @@ export function CreativeLanding({ onExitDark }: CreativeLandingProps) {
                 construidos desde cero, no una plantilla con tu logo pegado encima.
               </p>
               <a
-                href="https://viajero.universos.dev"
+                href="https://demo.universos.dev"
                 target="_blank"
                 rel="noopener"
                 style={{
